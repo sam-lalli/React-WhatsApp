@@ -4,6 +4,8 @@ import { useEffect, useState }from 'react'
 //Prefix helps find data saved in local storage if you
 //are running lots of applications on localhost
 //debugging help as prefix named after app
+
+
 const PREFIX = 'whatsapp-clone-'
 
 export default function useLocalStorage(key, initialValue) {
