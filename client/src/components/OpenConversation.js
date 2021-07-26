@@ -19,7 +19,24 @@ export default function OpenConversation() {
     return (
         <div className="d-flex flex-column flex-grow-1">
             <div className='flex-grow-1 overflow-auto'>
-
+                <div className="h-100 d-flex flex-column align-items-start justify-content-end px-3">
+                    {selectedConversation.message.map((m, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className="my-1 d-flex flex-column"
+                            >
+                                <div 
+                                className={`rounded px-2 py-1 ${m.fromMe ? 'bg-primary text-white' : 'border'}`}>
+                                    {m.text}
+                                </div>
+                                <div className={`text-muted small ${m.fromMe ? 'text-right' : ''}`}>
+                                    {m.fromMe ? 'You' : m.senderName}
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className='m-2'>
