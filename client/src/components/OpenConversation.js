@@ -31,7 +31,7 @@ export default function OpenConversation() {
                             <div
                                 ref={lastMessage ? setRef : null}
                                 key={index}
-                                className={`my-1 d-flex flex-column ${m.fromMe ? 'align-self-end': ''}`}
+                                className={`my-1 d-flex flex-column ${m.fromMe ? 'align-self-end align-items-end': 'align-items-start'}`}
                             >
                                 <div 
                                  className={`rounded px-2 py-1 ${m.fromMe ? 'bg-primary text-white' : 'border'}`}>
