@@ -73,7 +73,7 @@ export function ConversationsProvider({ id, children }) {
         const selected = index === selectedConversationIndex
         return { ...conversation, messages, recipients, selected}
     })
-
+ 
     const value = {
         conversations: formattedConversations,
         selectedConversation: formattedConversations[selectedConversationIndex],
